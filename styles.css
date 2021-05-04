@@ -1,0 +1,35 @@
+
+h1 {
+   font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 50px;
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  margin: auto;
+}
+
+nav {
+  background-color: #e3f2fd;
+}
+
+.list-group{
+flex-direction: row;
+} 
+
+.list-group-item{
+  border: none;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 30%;
+}
+
+.poketype{
+  list-style-type: none;
+  padding-left: 0;
+}
