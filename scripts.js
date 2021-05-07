@@ -135,7 +135,7 @@ let pokemonRepository = (() => {
 pokemonRepository.loadList()
   .then(() => {
       //when promise fullfilled get array of pokemon.  For each array item add it to page's HTML
-      pokemonRepository.getArray().forEach(pokemon => pokemonRepository.loadList(pokemon));
+      pokemonRepository.getArray().forEach(pokemon => pokemonRepository.addListItem(pokemon));
   });
 searchInput.addEventListener("input", () => {
   pokemonRepository.pokemonLookup(searchInput.value);

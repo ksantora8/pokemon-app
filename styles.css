@@ -1,28 +1,80 @@
-h1{
-  font-family: 'Lato', sans-serif;
-  font-style: italic;
-  font-size: 50px;
+body{
+  background-color: #EFEFEF;
 }
+
+h1{
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+  font-size: 30px;
+  color: #5b5a5a;
+}
+
 .btn {
+  background-color: #ff3b3f;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #a9a9a9;
   font-family: 'Roboto', sans-serif;
   display: block;
   margin: auto;
 }
+
+.btn:hover{
+  transition-duration: 0.3s;
+  background-color:white;
+  color: #ff3b3f;
+  border-color: #caebf2;
+  border-width: 3px;
+}
+
+.btn:focus:not(:active){
+  background-color: #ff3b3f;
+  color:white;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #a9a9a9;
+  
+}
+
+.btn-primary:focus{
+  background-color:white;
+  color: #ff3b3f;
+  border-color: #caebf2;
+  border-width: 3px;
+  box-shadow: none;
+}
+
 nav {
-  background-color: #e3f2fd;
+  background-color: #EFEFEF;
 }
+
 .list-group{
-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
 }
+
 .list-group-item{
+  text-align: center;
+  background-color: #efefef;
   border: none;
 }
+
 img {
   display: block;
   margin: auto;
   max-width: 30%;
 }
+
 .poketype{
+  text-align: center;
   list-style-type: none;
   padding-left: 0;
+}
+
+.modal-header{
+  text-align: center;
+}
+
+.modal-content{
+  text-align: center;
 }
