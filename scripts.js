@@ -11,7 +11,7 @@ let pokemonRepository = (() => {
     if(typeof(pokemon)=='object'){
       let newPokeProperty = Object.keys(pokemon);
       if (newPokeProperty.includes('name') && newPokeProperty.includes('detailsUrl')){
-        pokemonList.push(pokemon)
+        pokemonList.push(pokemon);
       }else{
         alert('Incorrect Keys');
       }
@@ -97,7 +97,7 @@ let pokemonRepository = (() => {
       });
     }).catch(function (err) {
       console.error(err);
-    })
+    });
   }
   //go back in and correct syntax to match rest of code
   function loadDetails(pokemon){
@@ -110,7 +110,7 @@ let pokemonRepository = (() => {
              pokemon.weight = details.weight;
              pokemon.types = details.types;
           })
-          .catch(err => console.log(err))
+          .catch(err => console.log(err));
   }
 
   function pokemonLookup(searchValue){
@@ -119,7 +119,7 @@ let pokemonRepository = (() => {
     let searched = pokemonList.filter(pokemon => {
       let pokemonNames = pokemon.name;
       if(pokemonNames.includes(searchValue))
-      htmlList(pokemon);
+      loadList(pokemon);
     });
   }
 
@@ -130,7 +130,7 @@ let pokemonRepository = (() => {
     loadList: loadList,
     loadDetails : loadDetails,
     pokemonLookup: pokemonLookup,
-  }
+  };
 })();
 pokemonRepository.loadList()
   .then(() => {
