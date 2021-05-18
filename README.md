@@ -15,4 +15,5 @@ On user click, attributes of a specific pokemon with be displyed in a modal
 User can search pokemon by name
 
 API Link: https://pokeapi.co/api/v2/pokemon/?limit=150
-Project Link: 
+
+Project Link: https://ksantora8.github.io/pokemon-app/
