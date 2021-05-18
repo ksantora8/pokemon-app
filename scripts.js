@@ -1,7 +1,7 @@
 let pokemonRepository = (() => {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-  let modalContainer = document.getElementById('modal-container');
+  //let modalContainer = document.getElementById('modal-container');
 
   function getArray(){
       return pokemonList;
@@ -39,13 +39,14 @@ let pokemonRepository = (() => {
   }
 
   function showDetails(pokemon){
-    
+
       loadDetails(pokemon)
           .then(() => {
+            /* eslint-disable no-console */
             console.log(pokemon);
             let modalBody = document.querySelector('.modal-body');
 
-            //clear modalBody 
+            //clear modalBody
             modalBody.innerHTML = '';
 
             //display pokemon name
@@ -119,7 +120,7 @@ let pokemonRepository = (() => {
     let searched = pokemonList.filter(pokemon => {
       let pokemonNames = pokemon.name;
       if(pokemonNames.includes(searchValue))
-      loadList(pokemon);
+      addListItem(pokemon);
     });
   }
 
@@ -137,6 +138,6 @@ pokemonRepository.loadList()
       //when promise fullfilled get array of pokemon.  For each array item add it to page's HTML
       pokemonRepository.getArray().forEach(pokemon => pokemonRepository.addListItem(pokemon));
   });
-searchInput.addEventListener("input", () => {
+searchInput.addEventListener('input', () => {
   pokemonRepository.pokemonLookup(searchInput.value);
 });
