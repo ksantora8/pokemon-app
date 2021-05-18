@@ -121,7 +121,8 @@ const pokemonRepository = (() => {
     /* eslint array-callback-return: ["error", { allowImplicit: true }] */
     pokemonList.filter((pokemon) => {
       const pokemonNames = pokemon.name;
-      if (pokemonNames.includes(searchValue)) addListItem(pokemon);
+      if (pokemonNames.includes(searchValue))
+      return addListItem(pokemon);
     });
   }
 
